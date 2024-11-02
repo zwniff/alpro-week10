@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Malfino Muhammad Willianz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #00c6ff, #0072ff);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 150px;
+        }
+
+        nav {
+            background: linear-gradient(to right, #0066cc, #005bb5);
+            padding: 10px 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 95%;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 20px;
+            box-sizing: border-box;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-left: 10px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #005bb5;
+            min-width: 160px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .portfolio-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 195px;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-card h3 {
+            margin: 10px 0;
+        }
+
+        .portfolio-card p {
+            padding: 0 10px;
+            flex-grow: 1;
+        }
+
+        .portfolio-card a {
+            display: inline-block;
+            background-color: #008cff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-bottom: 0;
+        }
+
+        .portfolio-card a:hover {
+            background-color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/profile">Profile</a>
+        <div class="dropdown">
+            <a href="#">More</a>
+            <div class="dropdown-content">
+                <a href="/fibonacci">Fibonacci</a>
+                <a href="/csv">CSV</a>
+            </div>
+        </div>
+    </nav>
+
+    <h2>Projects</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-card">
+            <h3>Sea Animals Classifier</h3>
+            <p>mobilenetv2 based classifier for my other project</p>
+            <a href="https://github.com/zwniff/sea-animals" target="_blank">GitHub →</a>
+        </div>
+        
+        <div class="portfolio-card">
+            <h3>MarineDex</h3>
+            <p>A web-based application for people to learn about endangered sea animals (concept)</p>
+            <a href="https://drive.google.com/file/d/1-4rNJ8oAC0XrOQ6uemXpF4GpyO8s7y26/view?usp=sharing" target="_blank">Google Drive →</a>
+        </div>
+        
+        <div class="portfolio-card">
+            <h3>Coming Soon</h3>
+            <p>Another project will be coming soon.</p>
+            <a href="https://github.com/zwniff/" target="_blank">Coming Soon →</a>
+        </div>
+    </div>
+</body>
+</html>
